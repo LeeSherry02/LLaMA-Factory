@@ -1,0 +1,4 @@
+model_name_or_path: /home/disk-380/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+template: deepseek3
+infer_backend: huggingface  # choices: [huggingface, vllm]
+trust_remote_code: true
