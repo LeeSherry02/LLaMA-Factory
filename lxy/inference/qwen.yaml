@@ -1,4 +1,5 @@
-model_name_or_path: /home/disk-380/models/Qwen/Qwen2.5-7B-Instruct
+model_name_or_path: /remote-home/xiaoyili/2025-Medical/model/Qwen/Qwen2___5-1___5B
+# /home/disk-380/models/Qwen/Qwen2.5-7B-Instruct
 template: qwen
 infer_backend: huggingface  # choices: [huggingface, vllm]
 trust_remote_code: true
