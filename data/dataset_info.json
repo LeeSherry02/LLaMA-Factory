@@ -660,5 +660,19 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "huatuo_26m_lite": {
+    "file_name": "huatuo_26m_lite.json",
+    "columns": {
+      "prompt": "question",
+      "response": "answer"
+    }
+  },
+  "huatuo_26m_lite_score_5": {
+    "file_name": "huatuo_26m_lite_score_5.json",
+    "columns": {
+      "prompt": "question",
+      "response": "answer"
+    }
   }
 }
