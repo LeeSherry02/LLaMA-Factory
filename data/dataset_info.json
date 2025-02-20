@@ -674,5 +674,12 @@
       "prompt": "question",
       "response": "answer"
     }
+  },
+  "huatuo_26m_lite_score_5_alpaca_3*500_filtered_ifd_1.1_rifd_2_60%": {
+    "file_name": "huatuo_26m_lite_score_5_alpaca_3*500_filtered_ifd_1.1_rifd_2_60%.json",
+    "columns": {
+      "prompt": "instruction",
+      "response": "output"
+    }
   }
 }

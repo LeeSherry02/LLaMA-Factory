@@ -8,7 +8,8 @@ finetuning_type: full
 deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
-dataset: huatuo_26m_lite_score_5
+# dataset: huatuo_26m_lite_score_5
+dataset: huatuo_26m_lite_score_5_alpaca_3*500_filtered_ifd_1.1_rifd_2_60%
 template: qwen
 cutoff_len: 512
 # max_samples: 1000
