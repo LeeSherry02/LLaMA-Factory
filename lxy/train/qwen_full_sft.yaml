@@ -1,14 +1,16 @@
-### model
+### modeljieshi
 model_name_or_path: /remote-home/xiaoyili/2025-Medical/model/Qwen/Qwen2___5-1___5B
 
 ### method
 stage: sft
 do_train: true
 finetuning_type: full
-deepspeed: examples/deepspeed/ds_z3_config.json
+# deepspeed: examples/deepspeed/ds_z3_config.json
+deepspeed: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/examples/deepspeed/ds_z3_config.json
 
 ### dataset
 # dataset: huatuo_26m_lite_score_5
+dataset_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/data
 dataset: huatuo_26m_lite_score_5_alpaca_3*500_filtered_ifd_1.1_rifd_2_60%
 template: qwen
 cutoff_len: 512
