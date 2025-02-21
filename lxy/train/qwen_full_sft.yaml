@@ -6,7 +6,7 @@ stage: sft
 do_train: true
 finetuning_type: full
 # deepspeed: examples/deepspeed/ds_z3_config.json
-deepspeed: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/examples/deepspeed/ds_z3_config.json
+deepspeed: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/examples/deepspeed/ds_z2_config.json
 
 ### dataset
 # dataset: huatuo_26m_lite_score_5
@@ -16,7 +16,7 @@ template: qwen
 cutoff_len: 512
 # max_samples: 1000
 overwrite_cache: true
-preprocessing_num_workers: 16
+preprocessing_num_workers: 4
 
 ### output
 output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/full/sft
