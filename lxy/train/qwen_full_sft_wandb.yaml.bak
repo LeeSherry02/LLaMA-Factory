@@ -25,7 +25,7 @@ save_steps: 100
 plot_loss: true
 overwrite_output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/huatuo_26m_lite_score_5_alpaca_3*500
 report_to : wandb
-run_name: huatuo_26m_lite_score_5_alpaca_3*500
+run_name: "${WANDB_NAME}"  # 添加 run_name 参数
 
 ### train
 per_device_train_batch_size: 1
