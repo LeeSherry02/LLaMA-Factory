@@ -1,11 +1,12 @@
 #!/bin/bash
 
-DATASET='MedThoughts-8K'
+DATASET="huatuo_26m_lite"
+# 'MedThoughts-8K'
 PER_DEVICE_TRAIN_BATCH_SIZE=1
 GRADIENT_ACCUMULATION_STEPS=16
 NUM_TRAIN_EPOCHS=5.0  # 添加 num_train_epochs 变量
 LEARNING_RATE=1.0e-6  # 添加 learning_rate 变量
-CUTOFF_LEN=2048
+CUTOFF_LEN=1024
 
 # wandb信息
 WANDB_PROJECT="qwen_full_sft"
