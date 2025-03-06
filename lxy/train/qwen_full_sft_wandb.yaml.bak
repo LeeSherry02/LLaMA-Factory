@@ -10,27 +10,27 @@ deepspeed: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/examples/deepspeed/d
 
 ### dataset
 dataset_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/data
-dataset: huatuo_26m_lite_score_5_alpaca_3*500
+dataset: MedThoughts-8K
 template: qwen
-cutoff_len: 512
+cutoff_len: 2048
 # max_samples: 1000
 overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-# output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/huatuo_26m_lite_score_5_alpaca_3*500
-output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/huatuo_26m_lite_score_5_alpaca_3*500
+# output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/MedThoughts-8K
+output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/MedThoughts-8K
 logging_steps: 5
 save_steps: 100
 plot_loss: true
-overwrite_output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/huatuo_26m_lite_score_5_alpaca_3*500
+overwrite_output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/MedThoughts-8K
 report_to : wandb
-run_name: "${WANDB_NAME}"  # 添加 run_name 参数
+run_name: MedThoughts-8K_1.0e-5
 
 ### train
 per_device_train_batch_size: 1
-gradient_accumulation_steps: 32
-learning_rate: 1.0e-6
+gradient_accumulation_steps: 16
+learning_rate: 1.0e-5
 num_train_epochs: 3.0
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
