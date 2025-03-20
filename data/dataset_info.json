@@ -690,10 +690,10 @@
     }
   },
   "MedThoughts-8K": {
-    "file_name": "MedThoughts-8K.json",
+    "file_name": "MedThoughts-8K_alpaca.json",
     "columns": {
-      "prompt": "question",
-      "response": "ds_think"
+      "prompt": "input",
+      "response": "output"
     }
   }
 }

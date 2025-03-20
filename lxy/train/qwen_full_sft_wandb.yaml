@@ -1,31 +1,32 @@
 ### model
-model_name_or_path: /remote-home/xiaoyili/2025-Medical/model/Qwen/Qwen2___5-1___5B
+model_name_or_path: /remote-home/lxy/models/Qwen/Qwen2___5-1___5B
 
 ### method
 stage: sft
 do_train: true
 finetuning_type: full
 # deepspeed: examples/deepspeed/ds_z3_config.json
-deepspeed: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/examples/deepspeed/ds_z3_config.json
+deepspeed: /remote-home/lxy/LLaMA-Factory/examples/deepspeed/ds_z3_config.json
+disable_gradient_checkpointing: False
 
 ### dataset
-dataset_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/data
-dataset: huatuo_26m_lite
+dataset_dir: /remote-home/lxy/LLaMA-Factory/data
+dataset: MedThoughts-8K
 template: qwen
-cutoff_len: 1024
+cutoff_len: 5000
 # max_samples: 1000
 overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-# output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/huatuo_26m_lite/1.0e-6/1024
-output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/huatuo_26m_lite/1.0e-6/1024
+# output_dir: /remote-home/lxy/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/MedThoughts-8K/1.0e-6/5000
+output_dir: /remote-home/lxy/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/MedThoughts-8K/1.0e-6/5000
 logging_steps: 5
 save_steps: 100
 plot_loss: true
-overwrite_output_dir: /remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/huatuo_26m_lite/1.0e-6/1024
+overwrite_output_dir: /remote-home/lxy/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/MedThoughts-8K/1.0e-6/5000
 report_to : wandb
-run_name: huatuo_26m_lite_1.0e-6_1024
+run_name: MedThoughts-8K_1.0e-6_5000
 
 ### train
 per_device_train_batch_size: 1

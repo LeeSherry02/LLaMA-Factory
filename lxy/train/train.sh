@@ -1,27 +1,29 @@
 #!/bin/bash
 
-DATASET="huatuo_26m_lite"
-# 'MedThoughts-8K'
+DATASET='MedThoughts-8K'
+# "huatuo_26m_lite"
+
 PER_DEVICE_TRAIN_BATCH_SIZE=1
 GRADIENT_ACCUMULATION_STEPS=16
 NUM_TRAIN_EPOCHS=5.0  # 添加 num_train_epochs 变量
 LEARNING_RATE=1.0e-6  # 添加 learning_rate 变量
-CUTOFF_LEN=1024
+CUTOFF_LEN=5000
 
 # wandb信息
 WANDB_PROJECT="qwen_full_sft"
 WANDB_NAME="${DATASET}_${LEARNING_RATE}_${CUTOFF_LEN}"
 
 # 修改yaml文件配置
-YAML_FILE="/remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/train/qwen_full_sft_wandb.yaml"
-MODEL_NAME_OR_PATH='/remote-home/xiaoyili/2025-Medical/model/Qwen/Qwen2___5-1___5B'
-OUTPUT_DIR="/remote-home/xiaoyili/2025-Medical/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/${DATASET}/${LEARNING_RATE}/${CUTOFF_LEN}"
+YAML_FILE="/remote-home/lxy/LLaMA-Factory/lxy/train/qwen_full_sft_wandb.yaml"
+MODEL_NAME_OR_PATH="/remote-home/lxy/models/Qwen/Qwen2___5-1___5B"
+# '/remote-home/xiaoyili/2025-Medical/model/Qwen/Qwen2___5-1___5B'
+OUTPUT_DIR="/remote-home/lxy/LLaMA-Factory/lxy/saves/qwen2.5-1.5b/${DATASET}/${LEARNING_RATE}/${CUTOFF_LEN}"
 
 # 备份文件名称
 YAML_FILE_BAK="${YAML_FILE}.bak"
 
 # 2、设置环境变量
-export CUDA_VISIBLE_DEVICES=0,1
+export CUDA_VISIBLE_DEVICES=2,3,4,5,6,7
 export FORCE_TORCHRUN=1
 
 export WANDB_MODE=online
