@@ -1,4 +1,4 @@
 import torch
-
-# 清理缓存
-torch.cuda.empty_cache()
+torch.cuda.current_device()
+torch.cuda.get_device_name(0)
+torch.__version__

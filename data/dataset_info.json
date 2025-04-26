@@ -2,6 +2,10 @@
   "identity": {
     "file_name": "identity.json"
   },
+  "ShareGPT_52K": {
+    "file_name": "ShareGPT_V3_unfiltered_cleaned_split_no_imsorry.json",
+    "formatting": "sharegpt"
+  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
@@ -694,6 +698,13 @@
     "columns": {
       "prompt": "input",
       "response": "output"
+    }
+  },
+  "Med-BM": {
+    "file_name": "med_bm_sft_dataset.jsonl",
+    "columns": {
+      "prompt": "prompt",
+      "response": "response"
     }
   }
 }
