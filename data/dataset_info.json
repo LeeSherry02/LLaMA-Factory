@@ -701,10 +701,42 @@
     }
   },
   "Med-BM": {
-    "file_name": "med_bm_sft_dataset.jsonl",
+    "file_name": "medcraft/23434_med_bm_sft_dataset.jsonl",
     "columns": {
       "prompt": "prompt",
       "response": "response"
+    }
+  },
+  "Medcraft-28655": {
+    "file_name": "medcraft/28655_sft_v2.jsonl",
+    "columns": {
+      "prompt": "question",
+      "response": "best_response"
+    }
+  },
+  "Medcraft-9928": {
+    "file_name": "medcraft/9928_cons_add.json",
+    "columns": {
+      "prompt": "question",
+      "response": "best_response"
+    }
+  },
+  "Medcraft-dpo-2172": {
+    "file_name": "medcraft/dpo/2172_dpo_llama_factory.jsonl",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "Medcraft-dpo-2000-random": {
+    "file_name": "medcraft/dpo/2000_dpo_llama_factory_random.jsonl",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "chosen": "chosen",
+      "rejected": "rejected"
     }
   }
 }

@@ -1,12 +1,12 @@
 #!/bin/bash
 
-DATASET='ShareGPT_52K,huatuo_26m_lite_score_5'
+DATASET='Med-BM,Medcraft-28655,Medcraft-9928'
 MODEL='llama_3.1_8b'
 
 PER_DEVICE_TRAIN_BATCH_SIZE=1
 GRADIENT_ACCUMULATION_STEPS=16
 NUM_TRAIN_EPOCHS=2.0  # 添加 num_train_epochs 变量
-LEARNING_RATE=2.0e-5  # 添加 learning_rate 变量
+LEARNING_RATE=5.0e-6  # 添加 learning_rate 变量
 CUTOFF_LEN=1024
 
 # wandb信息
@@ -15,7 +15,7 @@ WANDB_NAME="${DATASET}_${LEARNING_RATE}_${CUTOFF_LEN}"
 
 # 修改yaml文件配置
 YAML_FILE="/data/lxy/LLaMA-Factory/lxy/train/llama_full_sft_wandb.yaml"
-MODEL_NAME_OR_PATH="/data/lxy/models/LLM-Research/Meta-Llama-3___1-8B"
+MODEL_NAME_OR_PATH="/data/lxy/LLaMA-Factory/lxy/saves/llama_3.1_8b/ShareGPT_52K,huatuo_26m_lite_score_5/2.0e-5/1024"
 OUTPUT_DIR="/data/lxy/LLaMA-Factory/lxy/saves/${MODEL}/${DATASET}/${LEARNING_RATE}/${CUTOFF_LEN}"
 
 

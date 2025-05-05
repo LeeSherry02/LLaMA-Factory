@@ -1,0 +1,1 @@
+llamafactory-cli export /data/lxy/LLaMA-Factory/lxy/train/merge/llama3_lora_sft.yaml
